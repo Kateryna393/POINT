@@ -1,21 +1,54 @@
 const magnifier = document.querySelector('.magnifier');
-const background = document.querySelector('.background img');
+const galleryImages = document.querySelectorAll('.gallery-item img'); 
 
-background.addEventListener('mousemove', (event)) => {
-    const { left, top, width, height } = background.getBoundingClientRect();
+galleryImages.forEach(image => {
+    
+    image.addEventListener('mousemove', (event) => {
+        const { left, top, width, height } = image.getBoundingClientRect();
 
-    // Позиція курсора відносно зображення
-    const mouseX = event.clientX - left;
-    const mouseY = event.clientY - top;
+        
+        const mouseX = event.clientX - left;
+        const mouseY = event.clientY - top;
 
-    // Відсоткові координати для фонового зображення в лупі
-    const percentX = (mouseX / width) * 100;
-    const percentY = (mouseY / height) * 100;
+        
+        magnifier.style.left = `${event.clientX}px`;
+        magnifier.style.top = `${event.clientY}px`;
+        magnifier.style.display = 'block';
 
-    // Оновлення чіткого зображення всередині лупи
-    magnifier.style.backgroundImage = `url(${background.src})`;
-    magnifier.style.backgroundSize = `${width}px ${height}px`;
-    magnifier.style.backgroundPosition = `${percentX}% ${percentY}%`;
+        
+        const percentX = (mouseX / width) * 100;
+        const percentY = (mouseY / height) * 100;
 
-    //
-}
+        
+        magnifier.style.backgroundImage = `url(${image.src})`;
+        magnifier.style.backgroundSize = `${width * 2}px ${height * 2}px`;
+        magnifier.style.backgroundPosition = `${percentX}% ${percentY}%`;
+    });
+
+    
+    image.addEventListener('mouseleave', () => {
+        magnifier.style.display = 'none';
+    });
+});
+const contactLink = document.getElementById('contact-link');
+const modal = document.getElementById('contact-modal');
+const closeModal = document.getElementById('close-modal');
+
+
+contactLink.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    modal.style.display = 'block';
+});
+
+
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+

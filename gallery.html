@@ -3,40 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOCUSPOINT - Gallery</title>
+    <title>Gallery - FOCUSPOINT</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <div class="social-icons">
             <a href="#"><img src="fecebook.png" alt="Facebook"></a>
             <a href="#"><img src="insta.png" alt="Instagram"></a>
             <a href="#"><img src="linkendi.png" alt="LinkedIn"></a>
         </div>
+        <div class="social-icons-right">
+            <a href="#"><img src="search icon png vector.png" alt="Instagram"></a>
+        </div>
         <div class="nav-container">
             <h1>FOCUSPOINT</h1>
             <nav>
-                <a href="index.html">GALLERY</a> <!-- Перехід назад на головну -->
+                <a href="index.html">HOME</a>
                 <a href="#">ABOUT</a>
-                <a href="#">CONTACT</a>
+                <a href="#" id="contact-link">CONTACT</a>
             </nav>
         </div>
     </header>
 
-    <div class="gallery-content">
-        <h2>Gallery</h2>
-        <div class="gallery-images">
-            <img src="image1.jpg" alt="Gallery Image 1">
-            <img src="image2.jpg" alt="Gallery Image 2">
-            <img src="image3.jpg" alt="Gallery Image 3">
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="photo 1.webp" alt="Photo 1"></div>
+        <div class="gallery-item"><img src="photo 7.jpg" alt="Nature 2"></div>
+        <div class="gallery-item"><img src="photo 3.jpg" alt="Nature 3"></div>
+        <div class="gallery-item"><img src="photo 4.jpg" alt="Nature 4"></div>
+        <div class="gallery-item"><img src="photo 5.jpg" alt="Nature 5"></div>
+        <div class="gallery-item"><img src="photo 6.jpg" alt="Nature 6"></div>
+        <div class="gallery-item"><img src="photo 8.webp" alt="Nature 3"></div>
+        <div class="gallery-item"><img src="photo 9.jpg" alt="Nature 4"></div>
+        <div class="gallery-item"><img src="photo 10.jpg" alt="Nature 5"></div>
+        <div class="gallery-item"><img src="photo 11.jpg" alt="Nature 6"></div>
+        <div class="gallery-item"><img src="photo 12.jpg" alt="Nature 6"></div>
+        <div class="gallery-item"><img src="photo 2.jpg" alt="Nature 5"></div>
+    </div>
+    
+    <div class="magnifier"></div> 
+    
+    <footer>
+        DESIGNED AND DEVELOPED BY KATERYNA NZHYNYK
+    </footer>
+
+    
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>EMAIL: focuspoint.ch@gmail.com</p>
+            <p>PHONE: +41 79 877 23 67</p>
         </div>
     </div>
 
-    <footer>
-        DESIGN BY KATERYNA NZHYNYK
-    </footer>
+<div id="about-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-about-modal" class="close">&times;</span>
+        <h2>About FOCUSPOINT</h2>
+        <p>Welcome to FOCUSPOINT — a digital space designed to remind us of the importance of focus in a world overloaded with information and noise. Through interactive visuals and thoughtful design, this platform encourages users to find their unique point of concentration, unveiling the hidden depth and beauty of various paintings. Explore, focus, and rediscover what truly matters.</p>
+    </div>
+</div>
 
-    <script src="script.js"></script> <!-- Підключення JavaScript -->
+
+    <script src="script.js"></script> 
 </body>
 </html>

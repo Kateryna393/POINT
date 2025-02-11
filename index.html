@@ -14,12 +14,17 @@
             <a href="#"><img src="insta.png" alt="Instagram"></a>
             <a href="#"><img src="linkendi.png" alt="LinkedIn"></a>
         </div>
+
+        <div class="social-icons-right">
+            <a href="#"><img src="search icon png vector.png" alt="Instagram"></a>
+        </div>
+
         <div class="nav-container">
             <h1>FOCUSPOINT</h1>
             <nav>
                 <a href="gallery.html">GALLERY</a>
                 <a href="#">ABOUT</a>
-                <a href="#">CONTACT</a>
+                <a href="#" id="contact-link">CONTACT</a>
             </nav>
         </div>
     </header>
@@ -28,18 +33,38 @@
         <img src="nature.jpg" alt="Blurred Background">
     </div>
 
-    <div class="magnifier"></div> <!-- Лупа -->
+    <div class="magnifier"></div> 
 
     <div class="bottom-content">
         <p>IN A WORLD OVERLOADED WITH INFORMATION AND NOISE, IT’S IMPORTANT TO FIND YOUR POINT OF FOCUS, 
             AS IT ALLOWS YOU TO SEE THE DEPTH AND BEAUTY OF THE DETAILS THAT ARE USUALLY HIDDEN</p>
-        <a href="#" class="explore-btn">EXPLORE NOW</a>
+        <a href="gallery.html" class="explore-btn">EXPLORE NOW</a>
     </div>
 
     <footer>
-        DESIGN BY KATERYNA NZHYNYK
+        DESIGNED AND DEVELOPED BY KATERYNA NZHYNYK
     </footer>
 
-    <script src="script.js"></script> <!-- Підключення JavaScript -->
+    <!-- contact -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>EMAIL: focus.point@gmail.com</p>
+            <p>PHONE: +41 79 877 23 67</p>
+        </div>
+
+    </div>
+
+    <!--About -->
+<div id="about-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-about-modal" class="close">&times;</span>
+        <h2>About FOCUSPOINT</h2>
+        <p>Welcome to FOCUSPOINT — a digital space designed to remind us of the importance of focus in a world overloaded with information and noise. Through interactive visuals and thoughtful design, this platform encourages users to find their unique point of concentration, unveiling the hidden depth and beauty of various paintings. Explore, focus, and rediscover what truly matters.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
